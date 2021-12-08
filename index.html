@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>New bush Checker</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body class="container fs-6 bg-dark text-light">
+
+	<div class="page-header">
+		<h1 class="text-muted">Strongflex new bush checker</h1>
+	</div>
+	<div class="row">
+	<h2 >Settings</h2>
+	<div class="col-lg-6">
+	<div class="form-check form-check-inline">
+		<input class="form-check-input" type="checkbox" id="allSet">
+		<label class="form-check-label" for="allSet">Check only new bushes</label>
+	</div>
+	<div class="form-check form-check-inline">
+		<label class="form-select-label" for="lang">Language of file:</label>
+		<select class="form-select-input" type="select" id="langSet">
+			<option value="eng">English</option>
+			<option value="sk">SK/CZ</option>		
+		</select>
+	</div>
+	</div>
+	<div class="col-lg-6">
+	<div class="form-check form-switch">
+		<input class="form-check-input" type="checkbox" role="switch" id="setShort" >
+		<label class="form-check-label" for="setShort">Short CSV</label>
+	  </div>
+	  <div class="form-check form-switch">
+		<input class="form-check-input" type="radio" name="simpleCsv" id="setPrices" disabled>
+		<label class="form-check-label" for="setPrices">Only prices</label>
+	  </div>
+	  <div class="form-check form-switch">
+		<input class="form-check-input" type="radio" name="simpleCsv" id="setImages" checked disabled>
+		<label class="form-check-label" for="setImages">Only images</label>
+	  </div>
+	  <div class="form-check form-switch">
+		<input class="form-check-input" type="radio" name="simpleCsv" id="setCats" disabled>
+		<label class="form-check-label" for="setCats">Only cats</label>
+	  </div>
+	  <div class="form-check form-switch">
+		<input class="form-check-input" type="radio" name="simpleCsv" id="setTranslate" disabled>
+		<label class="form-check-label" for="setTranslate">Only for translate</label>
+	  </div>		
+	</div>
+	</div>
+
+	<div class="form inline">
+	<h2>Actions</h2>
+<!--	<input id="imgBtn" type="button" class="btn btn-secondary" value="Generate broken IMGs CSV" > -->
+	<input id="checkBtn" type="button" class="btn btn-secondary" value="Check bushes" >
+	<input id="dwnBtn" type="button" class="btn btn-secondary" value="Download new CSV">
+</div>	
+	<div id="blkList" class="row"></div>
+
+
+	<div class="row">
+		<p>Pocet novych silentov v CSV: <strong id="count">nenacitane</strong><br>
+		</p>
+		<div class="col-lg-4"><div class="imgList">
+
+		</div>
+    	</div>
+		<div class="col-lg-4" id="catList">
+
+			</div>
+
+<div class="col-lg-4"><H3>Paste REFs or CSV of broken images</H3>
+<input type="file" class="form-control" name="brokenCsv" id="fileCsv" >
+<p><strong>--or--</strong></p>
+
+
+	<textarea name="fieldOf" id="fieldOf" cols="40" rows="10"></textarea>
+
+<input id="refBtn" type="submit"  class="form-control" value="Get Refs from Textarea" />
+
+</div>
+<div class="loader-back"><div class="loader"></div></div>
+
+
+
+
+
+
+
+</body>
+<script type="text/javascript" src="js/papaparse.js"></script>
+<script type="text/javascript" src="js/xmlToJSON.min.js"></script>
+<script type="text/javascript" src="js/clipboard.js"></script>
+<script type="module" src="js/app.js"></script>
+
+
+</html>
